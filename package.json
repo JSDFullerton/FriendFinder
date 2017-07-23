@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/JSDFullerton/FriendFinder/issues"
   },
-  "homepage": "https://github.com/JSDFullerton/FriendFinder#readme"
+  "homepage": "https://github.com/JSDFullerton/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7"
+  }
 }
