@@ -1,60 +1,44 @@
-// REQUIRED PACKAGES & FRIENDS FILE
-	var friendsData = require("../data/firends.js");
+// REQUIRED FILES & PACKAGES
+var avengerData = require ('../data/friends');
 
 
-// EXPORT API MODULE FOR USE IN MAIN SERVER.JS
-
-	module.exports = function(app) {
-
-		// GET - DISPLAY POTENTIAL FRIENDS ONLY
-			app.get("/api/friends", function(req, res) {
-
-				res.json(friendsData);
-
-			});// close api friends get
+// EXPORT API MODLE FOR USE IN MAIN SERVER.JS
+module.exports = function (app) {
 
 
-		// POST - GET SURVERY INFO FROM USER & DISPLAY FRIEND MATCH (difference in total scores - use Math.abs for absolute value)
-			api.post("api/friends", function(req, res) {
+// GET - DISPLAY POTENTIAL AVENGERS TEAMMATES ONLY
+	app.get('/api/team', function (req, res){
+		res.json(avengerData);
+	});
 
-				var lowestScore = 0;
-				var friendMatch = "";
+// POST - GET SURVERY INFO FROM USER & DISPLAY BEST TEAMMATE
+	app.post('/api/team', function (req, res){
 
-				for (var i = 0; i < friendsData.length; i++) {
-					
-					var friendsArr = [];
+		var smallestScore = 0;
+		var bestMatch;
 
+		for (var i=0; i<avengerData.length; i++){
+			var compArray = [];
 
-					for (var j = 0; j < friendsData[i].scores.length; j++) {
+			for (var j=0; j< avengerData[i].scores.length; j++){
+				compArray.push(Math.abs(avengerData[i].scores[j] - req.body.scores[j]));
+			}
 
-						friendsArr.push(Math.abs(friendsData[i].scores[j] - req.body.scores[j]));
+			var matchScore = compArray.reduce((a,b) => a+b, 0);
 
-					}// close loop #2
+			if(smallestScore == 0){
+				smallestScore = matchScore;
+			}
 
+			if (matchScore < smallestScore){
+				smallestScore = matchScore;
 
-					// Match user score to closest existing friend score in Friends Array
-					var matchScore = friendsArr.reduce((a,b) => a + b, 0);
+				bestMatch = avengerData[i];
+			}
+		}
 
-					if (lowestScore == 0) {
-						lowestScore = matchScore;
-					}
+		res.json(bestMatch);
 
-					if (matchScore < lowestScore) {
-						lowestScore = matchScore
-
-						friendMatch = friendsData[i];
-					};
-
-					// SEND MATCH TO USER AS JSON
-					res.json(friendMatch);
-
-					// SEND USER DATA TO POSSILBE FRIENDS ARRAY OBJECT
-					friendsData.push(req.body);
-
-
-
-				}// close loop #1
-
-			}// close api post funct.
-
-	}// close export module funct
+		avengerData.push(req.body);
+	});
+}

@@ -1,9 +1,10 @@
 
 // FRIENDS DATA OBJECTS
 var celebrities = [
+
 	{
-		"name": "Ross",
-		"photo": "https://vignette2.wikia.nocookie.net/friends/images/0/0b/RossGeller.jpg/revision/latest/scale-to-width-down/350?cb=20100606065642",
+		"name": "Captain America",
+		"photo": "https://static.comicvine.com/uploads/scale_medium/11/113509/4369415-1506033357-54cfd.jpg",
 		"scores": [ 
 			"5",
 			"1",
@@ -15,10 +16,13 @@ var celebrities = [
 			"5",
 			"4",
 			"5"
-		]
-	}, {
-		"name": "Chandler",
-		"photo": "http://vignette4.wikia.nocookie.net/friends/images/2/21/2473459498_a3b4e40781.jpg/revision/latest?cb=20100601130820",
+		],
+		"totalScore": 36
+
+	}, 
+	{
+		"name": "Hulk",
+		"photo": "https://ctd-thechristianpost.netdna-ssl.com/en/full/35872/mark-ruffalo-as-the-hulk.jpg",
 		"scores": [
 			"4",
 			"2",
@@ -30,10 +34,12 @@ var celebrities = [
 			"1",
 			"3",
 			"2"
-		]
-	}, {
-		"name": "Joey",
-		"photo": "https://vignette1.wikia.nocookie.net/friends/images/f/f5/JoeyTribbiani.jpg/revision/latest?cb=20070426103739",
+		],
+		"totalScore": 25
+	},
+	{
+		"name": "Hawkeye",
+		"photo": "http://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/lg/public/2015/02/02/avengers.jpg",
 		"scores": [
 			"5",
 			"2",
@@ -45,10 +51,12 @@ var celebrities = [
 			"2",
 			"5",
 			"5"
-		]
-	}, {
-		"name": "Rachel",
-		"photo": "https://metrouk2.files.wordpress.com/2014/09/rachel3.jpeg?quality=80&strip=all",
+		],
+		"totalScore": 31
+	}, 
+	{
+		"name": "Black Widow",
+		"photo": "https://images.moviepilot.com/image/upload/c_fill,h_470,q_auto:good,w_620/scarlett_johansson_black_widow-huge-spoilers-about-black-widow-hinted-in-the-new-avengers-2-trailer-jpeg-221826.jpg",
 		"scores": [
 			"3",
 			"3",
@@ -60,10 +68,12 @@ var celebrities = [
 			"2",
 			"2",
 			"3"
-		]
-	}, {
-	"name": "Pheobe",
-		"photo": "https://upload.wikimedia.org/wikipedia/en/f/f6/Friendsphoebe.jpg",
+		],
+		"totalScore": 26
+	}, 
+	{
+	"name": "Iron Man",
+		"photo": "http://static1.businessinsider.com/image/55670e0969beddb1470e11f7-1200-600/tony-stark-robert-downey-jr-jericho-missile-iron-man-1-1.jpg",
 		"scores": [
 			"4",
 			"4",
@@ -75,10 +85,12 @@ var celebrities = [
 			"4",
 			"4",
 			"4"
-		]
-	}, {
-		"name": "Monica",
-		"photo": "https://vignette2.wikia.nocookie.net/friends/images/7/75/Monica.jpg/revision/latest?cb=20130802071219",
+		],
+		"totalScore": 40
+	}, 
+	{
+		"name": "Iron Patriot",
+		"photo": "http://assets.nydailynews.com/polopoly_fs/1.1329304.1367111096!/img/httpImage/image.jpg_gen/derivatives/article_750/cheadle28n-1-web.jpg",
 		"scores": [
 			"5",
 			"5",
@@ -90,8 +102,44 @@ var celebrities = [
 			"5",
 			"5",
 			"5"
-		]
-	}
+		],
+		"totalScore": 50
+	},
+	{
+		"name": "Pepper Potts",
+		"photo": "https://vignette4.wikia.nocookie.net/ironman/images/0/0a/Pepperpotsmovie.jpg/revision/latest?cb=20130613030518",
+		"scores": [
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1",
+			"1"
+		],
+		"totalScore": 10
+	},
+	{
+		"name": "Thor",
+		"photo": "https://img.cinemablend.com/filter:scale/quill/b/e/e/0/e/f/bee0ef8beb8cc11ced998fc20ec49c128671dc1d.jpg?mw=600",
+		"scores": [ 
+			"3",
+			"3",
+			"3",
+			"3",
+			"3",
+			"3",
+			"3",
+			"3",
+			"3",
+			"3"
+		],
+		"totalScore": 30
+
+	}, 
 ];
 
 
